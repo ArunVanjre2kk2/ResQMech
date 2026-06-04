@@ -1,0 +1,61 @@
+// app.json
+{
+  "expo": {
+    "name": "resq",
+    "slug": "resq",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "resq",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyC_Fckj3zS5-yOseoaeJgZRqMaQFq79ZjM"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "RESQ needs your location to find nearby mechanics."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyC_Fckj3zS5-yOseoaeJgZRqMaQFq79ZjM"
+        }
+      }
+    },
+    "web": {
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      "expo-font",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
